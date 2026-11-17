@@ -1,0 +1,24 @@
+name: technas
+description: Technas. Payments and user accounts behind one client and one secret. The full package; technas_pay and technas_accounts are the thin ones.
+version: 0.1.0
+repository: https://github.com/Technas-Organization/technas-dart
+publish_to: none
+
+environment:
+  sdk: ">=3.3.0 <4.0.0"
+
+# The full package depends on the thin ones, never the reverse.
+dependencies:
+  http: ^1.2.0
+  technas_accounts:
+    git:
+      url: https://github.com/Technas-Organization/technas-accounts-dart.git
+      ref: v0.1.0
+  technas_pay:
+    git:
+      url: https://github.com/Technas-Organization/technas-pay-dart.git
+      ref: v0.7.1
+
+dev_dependencies:
+  lints: ^5.0.0
+  test: ^1.25.0
